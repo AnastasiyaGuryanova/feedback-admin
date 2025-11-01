@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  // Включаем строгий режим React
+  reactStrictMode: true,
+
+  // Настройки для оптимизации изображений
+  images: {
+    domains: ["lh3.googleusercontent.com", "avatars.githubusercontent.com"],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
